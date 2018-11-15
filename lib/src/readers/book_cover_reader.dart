@@ -29,7 +29,7 @@ class BookCoverReader {
                 coverMetaItem.Content.toLowerCase(),
             orElse: () => null);
     if (coverManifestItem == null)
-      throw new Exception(
+      print(
           "Incorrect EPUB manifest: item with ID = \"${coverMetaItem.Content}\" is missing.");
 
     EpubByteContentFileRef coverImageContentFileRef;
